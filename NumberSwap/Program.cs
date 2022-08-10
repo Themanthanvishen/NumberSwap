@@ -4,26 +4,43 @@ public class SwapExe
 {
     public static void Main(string[] args)
     {
-        int number1;
-        int number2;
+        int num1;
+        int num2;
         int sawpnum;
 
         Console.WriteLine("\nWelcome!");
         Console.Write("\nFirst Number : ");
 
-        number1 = int.Parse(Console.ReadLine());
+        num1 = int.Parse(Console.ReadLine());
 
         Console.Write("\nSecond Number : ");
 
-        number2 = int.Parse(Console.ReadLine());
+        num2 = int.Parse(Console.ReadLine());
 
-        sawpnum = number1;
-        number1 = number2;
-        number2 = sawpnum;
+        sawpnum = num1;
+        num1 = num2;
+        num2 = sawpnum;
 
         
-        Console.Write("\nFirst Number : " + number1);
-        Console.Write("\nSecond Number : " + number2);
+        Console.Write("\nFirst Number : " + num1);
+        Console.Write("\nSecond Number : " + num2);
+
+        // Method 2 without third variable
+        int numb1, numb2;
+        Console.WriteLine("\n\nMethod 2 (without third variable)");
+        Console.Write("\nFirst Number : ");
+
+        numb1 = int.Parse(Console.ReadLine());
+
+        Console.Write("\nSecond Number : ");
+
+        numb2 = int.Parse(Console.ReadLine());
+
+        numb1 = numb1 + numb2;
+        numb2 = numb1 - numb2;
+        numb1 = numb1 - numb2;
+        Console.Write("\nFirst Number : " + numb1);
+        Console.Write("\nSecond Number : " + numb2);
         Console.ReadLine();
 
     }
